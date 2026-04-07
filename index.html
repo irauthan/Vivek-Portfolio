@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Rauthan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Smooth Scroll -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <h2>Vivek Rauthan</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+
+        <img src="me.jpeg" alt="Vivek Rauthan" class="profile-img">
+
+        <h1>Hi, I'm Vivek 👋</h1>
+        <h2 class="typing"></h2>
+        <p>Backend-focused developer skilled in Java, JDBC, JSP & MySQL</p>
+
+        <div class="buttons">
+            <a href="https://github.com/irauthan" target="_blank" class="btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/vivek-rauthan-09rgofic/" target="_blank" class="btn outline">LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Motivated BCA student with strong foundation in Java, JDBC, Servlets and MySQL.
+        Passionate about backend development and problem solving.
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill">Java</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">JDBC</div>
+        <div class="skill">Servlets</div>
+        <div class="skill">JSP</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Vehicle Rental System</h3>
+        <p>Java Swing + JDBC system with booking, dashboard & analytics.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>EliteEvent Manager</h3>
+        <p>Event booking system with billing, GST and GUI interface.</p>
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: Avsrauthan3@gmail.com</p>
+
+    <div class="buttons">
+        <a href="https://github.com/irauthan" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/vivek-rauthan-09rgofic/" class="btn outline">LinkedIn</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Vivek Rauthan</p>
+</footer>
+
+<!-- JS Animations -->
+<script>
+/* Scroll Animation */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 200;
+        const height = sec.offsetHeight;
+
+        if (top > offset && top < offset + height) {
+            sec.classList.add("show");
+        }
+    });
+});
+
+/* Typing Effect */
+const text = ["Java Developer", "Backend Developer", "Full Stack Learner"];
+let i = 0, j = 0;
+let current = "";
+let isDeleting = false;
+const speed = 100;
+
+function type() {
+    const typing = document.querySelector(".typing");
+
+    if (i < text.length) {
+        if (!isDeleting && j <= text[i].length) {
+            current = text[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+            current = text[i].substring(0, j--);
+        }
+
+        typing.innerHTML = current;
+
+        if (j === text[i].length) isDeleting = true;
+        if (j === 0) {
+            isDeleting = false;
+            i++;
+        }
+    } else {
+        i = 0;
+    }
+
+    setTimeout(type, isDeleting ? 50 : speed);
+}
+
+type();
+</script>
+
+</body>
+</html>
