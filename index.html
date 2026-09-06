@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Optimization -->
-    <title>Vivek Rauthan | Java Backend Developer</title>
+    <!-- SEO & Identity Optimization -->
+    <title>Vivek Dev Portfolio</title>
     <meta name="description"
         content="Portfolio of Vivek Rauthan, a passionate Java Backend Developer specializing in C, Java, JDBC, Servlets, JSP, MySQL, and modern backend architectures.">
     <meta name="keywords"
-        content="Vivek Rauthan, Java Backend Developer, BCA, Portfolio, JDBC, Servlets, JSP, MySQL, Software Engineer, Dehradun">
+        content="Vivek Rauthan, Vivek Portfolio, Java Backend Developer, BCA, JDBC, Servlets, JSP, MySQL, Software Engineer">
     <link rel="icon" type="image/png" sizes="32x32" href="fevicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="fevicon.png">
     <!-- Google Fonts: Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,39 +22,29 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Design System CSS Link -->
+    <!-- Bootstrap 5.3 Framework Foundation -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Design System CSS Link (Loaded After Bootstrap) -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Premium Preloader Screen -->
+    <!-- Clean Minimal Preloader -->
     <div id="preloader">
-        <div class="preloader-logo">VIVEK<span class="logo-accent">.</span></div>
-        <div class="preloader-bar-bg">
-            <div class="preloader-bar"></div>
+        <div class="simple-loader">
+            <div class="simple-spinner"></div>
+            <div class="simple-loader-text"><img src="fevicon.png" alt="V" class="brand-v-logo">VIVEK<span class="logo-accent">.</span></div>
         </div>
     </div>
-
-    <!-- Custom Snapping Cursor -->
-    <div class="custom-cursor"></div>
 
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress"></div>
 
-    <!-- Background Animating Mesh Blobs -->
-    <div class="mesh-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-
-    <!-- Interactive Mouse Follower Glow Canvas -->
-    <div class="mouse-follower-glow"></div>
-
     <!-- Sticky Glass Navbar -->
     <header class="navbar">
         <div class="navbar-container">
-            <a href="#" class="nav-logo">VIVEK<span class="logo-accent">.</span></a>
+            <a href="#" class="nav-logo" aria-label="Vivek"><img src="fevicon.png" alt="V" class="brand-v-logo">VIVEK<span class="logo-accent">.</span></a>
 
             <nav class="nav-menu">
                 <a href="#about" class="nav-link">About</a>
@@ -98,7 +91,7 @@
     <div class="drawer-overlay"></div>
     <div class="mobile-drawer">
         <div class="drawer-header">
-            <span class="nav-logo">VIVEK<span class="logo-accent">.</span></span>
+            <span class="nav-logo"><img src="fevicon.png" alt="V" class="brand-v-logo">VIVEK<span class="logo-accent">.</span></span>
             <button class="drawer-close" aria-label="Close Menu">
                 <i data-lucide="x"></i>
             </button>
@@ -126,10 +119,8 @@
                     <span class="badge-dot"></span> Open For Job
                 </div>
                 <h1>Hello, I'm <br><span class="gradient-text">Vivek Rauthan</span></h1>
-                <div class="role-container">
-                    <span class="typing" id="typedRole"></span>
-                </div>
-                <p class="hero-description">Full Stack & Java Backend Developer building responsive web applications, RESTful APIs, and relational database architectures with Java, Spring Boot, and modern web standards.</p>
+                <h2 class="hero-subtitle">Java Backend Developer</h2>
+                <p class="hero-description">Specializing in Java, Spring Boot, RESTful APIs, and relational database architectures with a focus on clean code and scalable performance.</p>
 
                 <div class="hero-actions">
                     <a href="Vivek%20Resume.pdf" download class="btn btn-primary btn-magnetic">Download Resume <i
@@ -185,7 +176,7 @@
                 <span class="stat-label">Coding Problems</span>
             </div>
             <div class="stat-item">
-                <span class="stat-num" data-val="5">0</span>
+                <span class="stat-num" data-val="6">0</span>
                 <span class="stat-label">Active Projects</span>
             </div>
             <div class="stat-item">
@@ -512,6 +503,29 @@
         </div>
 
         <div class="projects-grid" id="projectsGrid">
+            <!-- Project 0: Botanical Sanctuary -->
+            <div class="project-card reveal-item-stagger">
+                <div class="project-visual">
+                    <img src="project_garden.png" alt="Virendra Garden's Botanical Sanctuary UI" class="project-img">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">WhatsApp API</span>
+                    </div>
+                    <h3>Virendra Garden's Sanctuary</h3>
+                    <p>Official web platform for a 40-year living botanical sanctuary featuring 100+ fruit trees, seasonal harvest calendars, and a live plant nursery store with 1-click WhatsApp checkout.</p>
+                    <div class="project-actions">
+                        <a href="https://irauthan.github.io/botanical-nursery-garden-website/" target="_blank" rel="noopener noreferrer" class="btn-primary-sm btn-magnetic"><i data-lucide="external-link"></i> Live View</a>
+                        <a href="https://github.com/irauthan/botanical-nursery-garden-website" target="_blank" rel="noopener noreferrer" class="project-btn btn-magnetic"><i data-lucide="github"></i> Source Code</a>
+                        <button class="project-btn btn-case btn-magnetic" data-project="garden">Case Study <i data-lucide="book-open"></i></button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Project 1 -->
             <div class="project-card reveal-item-stagger">
                 <div class="project-visual">
@@ -1217,7 +1231,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <span class="footer-logo">VIVEK<span class="logo-accent">.</span></span>
+                <span class="footer-logo"><img src="fevicon.png" alt="V" class="brand-v-logo">VIVEK<span class="logo-accent">.</span></span>
                 <p>Java Backend Developer & Computer Applications Student</p>
             </div>
 
@@ -1253,7 +1267,6 @@
 
         <div class="footer-bottom">
             <p>&copy; 2026 Vivek Rauthan. All rights reserved.</p>
-            <p>Made with ❤️ by Vivek Rauthan</p>
             <button class="btn-back-to-top" id="backToTop" aria-label="Back To Top">
                 <i data-lucide="chevron-up"></i>
             </button>
@@ -1294,6 +1307,26 @@
     <script>
         // Projects Detailed Case Studies Dataset
         const projectData = {
+            garden: {
+                title: "Virendra Garden's Botanical Sanctuary",
+                subtitle: "Official Living Heritage Sanctuary & Nursery Store | HTML5, CSS3, JavaScript, WhatsApp API",
+                overview: "A dedicated digital sanctuary platform built for Virendra Garden's (Estd. 1985) in Uttarakhand. It offers an interactive botanical sanctuary guide with 100+ fruit trees (Mango, Walnut, Peach, Litchi, Lemongrass), a seasonal harvest calendar, and a live plant nursery store with 1-click WhatsApp ordering.",
+                architecture: "Engineered with modern semantic HTML5 and vanilla CSS3 utilizing an eco-editorial design system. Features smooth micro-animations, accessible modal dialogs, and a responsive layout designed for effortless navigation across mobile and desktop devices.",
+                database: "Client-side catalog architecture and state management generating dynamic URL payloads formatted for WhatsApp Business API order communication.",
+                features: [
+                    "Interactive 40-year botanical sanctuary tour with zone breakdown",
+                    "Live plant nursery store with category search and cart summaries",
+                    "Direct 1-click WhatsApp checkout pre-populating customer requests",
+                    "Seasonal harvest guide highlighting peak fruit availability across Uttarakhand"
+                ],
+                lessons: "Refined responsive image art-direction for high visual fidelity, custom modal interactions, and streamlined conversational commerce checkout flows.",
+                future: [
+                    "Integrate 3D plant specimen visualizations using WebGL",
+                    "Add online visitor tour reservations with instant confirmation",
+                    "Implement bilingual localization (English / Hindi)"
+                ],
+                github: "https://github.com/irauthan/botanical-nursery-garden-website"
+            },
             vehicle: {
                 title: "Vehicle Rental System",
                 subtitle: "Enterprise Java Desktop Application | Swing, MySQL, JDBC",
@@ -1380,63 +1413,37 @@
             // Initialize Lucide Icons
             lucide.createIcons();
 
-            // Preloader Complete Progress
+            // Simple Clean Preloader Fade Out
             const preloader = document.getElementById('preloader');
-            const preloaderBar = document.querySelector('.preloader-bar');
-            let progress = 0;
-            const progressInterval = setInterval(() => {
-                progress += Math.floor(Math.random() * 15) + 5;
-                if (progress >= 100) {
-                    progress = 100;
-                    clearInterval(progressInterval);
-                    setTimeout(() => {
-                        preloader.classList.add('hide');
-                    }, 200);
+            window.addEventListener('load', () => {
+                if (preloader) {
+                    setTimeout(() => preloader.classList.add('hide'), 200);
                 }
-                preloaderBar.style.width = `${progress}%`;
-            }, 50);
-
-            // Custom Snapping Cursor Tracker
-            const cursor = document.querySelector('.custom-cursor');
-            let isMoving = false;
-            document.addEventListener('mousemove', (e) => {
-                if (!isMoving) {
-                    cursor.style.opacity = '1';
-                    isMoving = true;
+            });
+            // Safety fallback for instantaneous load
+            setTimeout(() => {
+                if (preloader && !preloader.classList.contains('hide')) {
+                    preloader.classList.add('hide');
                 }
-                cursor.style.top = `${e.clientY}px`;
-                cursor.style.left = `${e.clientX}px`;
-
-                // Mouse follow glow tracker
-                document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-                document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
-            });
-
-            document.addEventListener('mouseleave', () => {
-                cursor.style.opacity = '0';
-                isMoving = false;
-            });
-
-            // Hover Snapping on primary anchors/buttons
-            const interactiveElements = document.querySelectorAll('a, button, .btn-social, .tech-tag, .project-card, .certificate-card, .profile-card, .blog-card');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-            });
+            }, 600);
 
             // Scroll Progress Bar
             window.addEventListener('scroll', () => {
                 const scrollProgress = document.querySelector('.scroll-progress');
-                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-                const scrolled = (window.scrollY / scrollable) * 100;
-                scrollProgress.style.width = `${scrolled}%`;
+                if (scrollProgress) {
+                    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrolled = (window.scrollY / scrollable) * 100;
+                    scrollProgress.style.width = `${scrolled}%`;
+                }
 
                 // Navbar scrolled background state
                 const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
+                if (navbar) {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
                 }
             });
 
@@ -1451,36 +1458,6 @@
                 document.documentElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
             });
-
-            // Role Typing Animation
-            const typingSpan = document.getElementById('typedRole');
-            const roles = ["Backend Engineer", "Full Stack Developer", "Java Developer"];
-            let roleIdx = 0;
-            let charIdx = 0;
-            let isDeleting = false;
-
-            function typeRole() {
-                const currentRole = roles[roleIdx];
-                if (isDeleting) {
-                    typingSpan.textContent = currentRole.substring(0, charIdx - 1);
-                    charIdx--;
-                } else {
-                    typingSpan.textContent = currentRole.substring(0, charIdx + 1);
-                    charIdx++;
-                }
-
-                let typingSpeed = isDeleting ? 40 : 100;
-                if (!isDeleting && charIdx === currentRole.length) {
-                    typingSpeed = 1600; // Pause at end of role text
-                    isDeleting = true;
-                } else if (isDeleting && charIdx === 0) {
-                    isDeleting = false;
-                    roleIdx = (roleIdx + 1) % roles.length;
-                    typingSpeed = 400; // Pause before typing next role
-                }
-                setTimeout(typeRole, typingSpeed);
-            }
-            typeRole();
 
             // Mobile Drawer Toggle
             const mobileToggle = document.querySelector('.mobile-toggle');
@@ -1792,6 +1769,7 @@
                     id: "countrees-ai",
                     role: "Full Stack Developer",
                     company: "Countrees AI Technologies Private Limited",
+                    logo: "countrees_logo.png",
                     type: "Internship",
                     duration: "June 2026 – Present",
                     location: "Dehradun, Uttarakhand, India",
@@ -1823,21 +1801,25 @@
                         ? `<span class="badge-current"><span class="badge-dot pulse"></span> Current Role</span>` 
                         : '';
 
+                    const logoHTML = exp.logo 
+                        ? `<img src="${exp.logo}" alt="${exp.company} Logo" class="experience-company-logo">`
+                        : `<svg class="experience-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="url(#logo_grad_${idx})"/>
+                            <path d="M14 24C14 18.4772 18.4772 14 24 14C27.5 14 30.5 15.8 32.2 18.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M34 24C34 29.5228 29.5228 34 24 34C20.5 34 17.5 32.2 15.8 29.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="4" fill="#10B981"/>
+                            <defs>
+                                <linearGradient id="logo_grad_${idx}" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#059669"/>
+                                    <stop offset="1" stop-color="#047857"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>`;
+
                     return `
                         <article class="experience-card reveal-item-stagger" data-experience-id="${exp.id}">
                             <div class="experience-logo-box">
-                                <svg class="experience-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="48" height="48" rx="12" fill="url(#logo_grad_${idx})"/>
-                                    <path d="M14 24C14 18.4772 18.4772 14 24 14C27.5 14 30.5 15.8 32.2 18.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M34 24C34 29.5228 29.5228 34 24 34C20.5 34 17.5 32.2 15.8 29.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                                    <circle cx="24" cy="24" r="4" fill="#60A5FA"/>
-                                    <defs>
-                                        <linearGradient id="logo_grad_${idx}" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#2563EB"/>
-                                            <stop offset="1" stop-color="#4F46E5"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                                ${logoHTML}
                             </div>
 
                             <div class="experience-content">
@@ -1887,6 +1869,15 @@
 
             // Data-driven Featured Projects List
             const projectsList = [
+                {
+                    id: "garden",
+                    title: "Virendra Garden's Botanical Sanctuary",
+                    tags: ["HTML5", "CSS3", "JavaScript", "WhatsApp API"],
+                    image: "project_garden.png",
+                    description: "Official web platform for a 40-year living botanical sanctuary featuring 100+ fruit trees, seasonal harvest calendars, and a live plant nursery store with 1-click WhatsApp checkout.",
+                    githubUrl: "https://github.com/irauthan/botanical-nursery-garden-website",
+                    liveUrl: "https://irauthan.github.io/botanical-nursery-garden-website/"
+                },
                 {
                     id: "vehicle",
                     title: "Vehicle Rental System",
